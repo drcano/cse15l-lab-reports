@@ -4,7 +4,6 @@ cd:
 [user@sahara ~]$ cd lecture1
 [user@sahara ~/lecture1]$ cd Hello.java
 bash: cd: Hello.java: Not a directory
-[user@sahara ~/lecture1]$ 
 
 ```
 
@@ -16,7 +15,6 @@ Hello.class  Hello.java  messages  README
 be.txt  en-us.txt  es-mx.txt  zh-cn.txt
 [user@sahara ~/lecture1]$ ls Hello.java
 Hello.java
-[user@sahara ~/lecture1]$ 
 ```
 
 cat: 
