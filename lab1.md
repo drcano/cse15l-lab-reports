@@ -1,5 +1,5 @@
 # cd: 
-no argument: 
+**no argument:**
 ```
 [user@sahara ~]$ cd
 [user@sahara ~]$
@@ -10,7 +10,7 @@ since no argument is given to cd command, there is no directory to change to so 
 
 the output is not an error 
 
-directory as argument: 
+**directory as argument:**
 ```
 [user@sahara ~]$ cd lecture1
 [user@sahara ~/lecture1]$ 
@@ -21,7 +21,7 @@ we gave the argument lecture1 to the command cd so we moved into the lecture1 di
 
 the output is not an error 
 
-file as argument: 
+**file as argument:** 
 ```
 [user@sahara ~/lecture1]$ cd Hello.java
 bash: cd: Hello.java: Not a directory
@@ -34,7 +34,7 @@ the output is an error because a file is not a directory
 
 
 # ls: 
-no argument: 
+**no argument:**
 ```
 [user@sahara ~/lecture1]$ ls
 Hello.class  Hello.java  messages  README
@@ -45,7 +45,7 @@ since no argument is given to ls command, the command will list all the files of
 
 the output is not an error 
 
-directory as argument: 
+**directory as argument:**
 ```
 [user@sahara ~/lecture1]$ ls messages
 be.txt  en-us.txt  es-mx.txt  zh-cn.txt
@@ -56,7 +56,7 @@ since we used the messages directory as an argument for the ls command, the term
 
 the output is not an error 
 
-file as argument: 
+**file as argument:**
 ```
 [user@sahara ~/lecture1]$ ls Hello.java
 Hello.java
@@ -69,7 +69,7 @@ the output is not an error
 
 
 # cat: 
-no argument: 
+**no argument:**
 ```
 [user@sahara ~/lecture1]$ cat
 ^C
@@ -81,7 +81,7 @@ since no argument is given to cat command, the terminal concatenates nothing whi
 
 the output is not an error
 
-directory as argument: 
+**directory as argument:**
 ```
 [user@sahara ~/lecture1]$ cat messages
 cat: messages: Is a directory
@@ -92,7 +92,7 @@ since a directory is used as an argument for the cat command, we get an error me
 
 the output is an error because cat cannot accept a directory as an argument 
 
-file as argument: 
+**file as argument:**
 ```
 [user@sahara ~/lecture1]$ cat Hello.java
 import java.io.IOException;
