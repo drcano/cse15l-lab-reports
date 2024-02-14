@@ -8,7 +8,8 @@ In our week 4 lab, we were presented an assortment of jUnit tests and methods to
 public void testReverseinPlace {
   int[] input1 = {3};
   ArrayExamples.reverseInPlace(input1);
-  assertArrayEquals(new int[]{3}, input1); 
+  assertArrayEquals(new int[]{3}, input1);
+}
 ```
 The test then fails as soon as we introduce a larger sized int array thus indicating a bug in our program: 
 ```
@@ -18,7 +19,7 @@ public void testReverseInPlace() {
     int[] rev = {5,4,3,2,1,0};
     ArrayExamples.reverseInPlace(testArr);
     assertArrayEquals(testArr, rev);
-	}
+}
 ```
 ### The symptom: 
 //screenshot of test passing
@@ -32,7 +33,7 @@ static void reverseInPlace(int[] arr) {
     for(int i = 0; i < arr.length; i += 1) {
       arr[i] = arr[arr.length - i - 1];
     }
-  }
+}
 ```
 updated code: 
 ```
@@ -43,7 +44,7 @@ static void reverseInPlace(int[] arr) {
       arr[i] = arr[arr.length - i - 1]; 
       arr[arr.length - i - 1] = element; 
     }
-  }
+}
 ```
 
 In the original code block, the inputted int array will begin to reverse but as soon as it gets to the midway point it will start to repeat. Meaning if given the array `int [] testArr = {0,1,2,3,4,5};` we should expect to get a reversed array with the values  `int[] rev = {5,4,3,2,1,0}; ` but we are instead given the array, `{5,4,3,3,4,5}` thus presenting a bug in the code. In order to fix this bug, I implemented a local int variable `int element` to store an int value in the int array. This local variable is set in the for loop with `element = arr[i]` and will then swap the elements at the front and back of the array. This is done with `arr[i] = arr[arr.length - i - 1]; ` and `arr[arr.length - i - 1] = element;` and we set the for loop to traverse through half of the array.  
