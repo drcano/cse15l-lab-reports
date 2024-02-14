@@ -22,8 +22,9 @@ public void testReverseInPlace() {
 }
 ```
 ### The symptom: 
-//screenshot of test passing
-// ss of test failing
+![Image](testpass.jpg)
+
+![Image](testfail.jpg)
 
 ### The bug: 
 
