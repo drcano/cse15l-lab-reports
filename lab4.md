@@ -27,6 +27,6 @@ output: ![Image](testpass.jpg)
 
 ### Commit and push the resulting change to your Github account
 
-input: `git commit -am "new update"` ; `git push` 
+input: `git commit -am "new update"` -> `git push` 
 
 output: ![Image](gitpush.jpg)
