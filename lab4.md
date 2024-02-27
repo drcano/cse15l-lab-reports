@@ -1,4 +1,4 @@
-#Lab Report 4: Vim
+# Lab Report 4: Vim
 
 ### Log into ieng6
 input: `ssh drcano@ieng6.ucsd.edu`
