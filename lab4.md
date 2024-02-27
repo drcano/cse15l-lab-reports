@@ -16,12 +16,12 @@ input: `cd lab7` -> `bash test.sh`
 output: 
 
 ### Edit the code file to fix the failing test
-input: `vim ListExamples.java` -> `/index1` -> <n> (x9) -> <e> -> <r> -> `2` -> `:wq!`
+input: `vim ListExamples.java` -> `/index1` -> `<n>` (x9) -> `<e>` -> `<r>` -> `2` -> `:wq!`
 
 output: 
 
 ### Run the tests, demonstrating that they now succeed
-input: <up><up><enter> 
+input: `<up><up><enter>` 
 
 output: 
 
