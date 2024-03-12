@@ -8,7 +8,7 @@ output: ![Image](sshss.jpg)
 comments: we use the secure shell protocol to connect to our student account on the `ieng6.uscd.edu` server 
 
 ### Clone your fork of the repository from your Github account (using the SSH URL) 
-input: `git clone https://github.com/drcano/lab7.git`
+input: `git clone git@github.com:drcano/lab7.git`
 
 output: ![Image](gitclone.jpg)
 
@@ -19,7 +19,7 @@ input: `cd lab7` -> `bash test.sh`
 
 output: ![Image](testfail.jpg)
 
-comments: For this process, the `ieng6-203` server didn't allow the `javac` command to be ran so I exited and reconnected to the `ieng6-201` server so that the jUnit tests could finally compile and still fail. To run our jUnit tests, I entered the `lab7` directory created by the `git clone` command and then used the `test.sh` file to run the jUnit tests with the command `bash test.sh`
+comments: For this process, the `ieng6-203` server didn't allow the `javac` command to be ran so I exited and reconnected to the `ieng6-201` server so that the jUnit tests could finally compile and still fail. To run our jUnit tests, I entered the `lab7` directory created by the `git clone` command using the command `cd lab7` and then used the `test.sh` file to run the jUnit tests with the command `bash test.sh`
 
 ### Edit the code file to fix the failing test
 input: `vim ListExamples.java` -> `/index1` -> `<n>` (x9) -> `<e>` -> `<r>` -> `2` -> `:wq!`
@@ -41,4 +41,5 @@ input: `git commit -am "new update"` -> `git push`
 
 output: ![Image](gitpush.jpg)
 
-comments: To solidfy the changes to the repository, I committed the changes using the command `git commit -am "new update"`, the `-a` option allows us to skip the `git add` command and go straight to committing the changes in the repository. After the changes are committed, we can push the changes to the repository using the `git push` command and our repository is fully updated. 
+
+comments: To solidfy the changes to the main repository on github, I committed the changes from my local machine using the command `git commit -am "new update"`, the `-a` option allows us to skip the `git add` command and go straight to committing the changes from our local directory to the main github repository. After the changes are committed, we can push the changes to the main github repository branch using the `git push` command and our main github repository is fully updated with the changes that we made on our local machine. We can use the `git log` command to see the author, date, and message for the commit that was made.  
