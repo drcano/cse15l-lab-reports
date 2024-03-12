@@ -12,7 +12,7 @@ input: `git clone git@github.com:drcano/lab7.git`
 
 output: ![Image](gitclone.jpg)
 
-comments: after forking the repository, we can clone the repositiory from our github account using the `git clone` command and entering the repositiory url. 
+comments: after forking the repository, we can clone the repositiory from our github account using the `git clone` command and entering the repositiory url from the ssh subheader as opposed to the https subheader. 
 
 ### Run the tests, demonstrating that they fail
 input: `cd lab7` -> `bash test.sh`
