@@ -1,26 +1,27 @@
-#Part 1: Debugging Scenario: 
+# Part 1: Debugging Scenario: 
 
-##Oringal post: 
+## Oringal post: 
 
-[screenshot]
+![Image](bug.jpg)
 
 hi, i'm trying to run my `grade.sh` file using the bash command and a valid github url (`bash grade.sh [valid github url]`, but when i run my script, the files don't compile using the `javac` command. I'm in the right directory and the file complies if I use the `javac` command outside of the script. I'm not sure why my bash if condition doesn't work and could use some help figuring it out. 
 
-##TA response: 
+## TA response: 
 
 When you make your comparison in the bash if conditional, are you comparing strings or numbers? Your code is trying to compare the exit code from the `javac ./grading-area/student-submission/*.java` and is looking for an exit code equality with respect to 0. What exit code should a bash command return if the command was successful? I'd suggest reviewing this stack overflow post (url) to help with your bug.   
 
-##Student response: 
+## Student response: 
 
-[screenshot]
+![Image](fix.jpg)
 
 I reviewed the bash scripting worksheets and the stack overflow post and realized that commands return 0 when they are successful. Also on my if conditional, I was using `==` instead of `-eq` since I'm comparing numeric values instead of string values. My other problem was that the if conditional should check if the exit code from the `javac` command is not equal to zero as opposed to being equal to zero. To fix my bug, I changed the original code from `if [ $? == 0 ];` to `if [ $? -ne 0 ];` After doing this, my script was able to successfully run, compile, and save the jUnit test results to a text file. 
 
-##Information: 
+## Information: 
 
-###File and Directory structure: 
+### File and Directory structure: 
 
-`list-examples-grader/
+```
+list-examples-grader/
  |- GraderServer.java
  |- Server.java
  |- ListExamples.java
@@ -28,14 +29,15 @@ I reviewed the bash scripting worksheets and the stack overflow post and realize
  |- grade.sh
  |- lib/ 
  	|- hamcrest-core-1.3.jar
- 	|- junit-4.13.2.jar `
+ 	|- junit-4.13.2.jar 
+```
 
 
 
 
-###Contents of each relevent file before bug fix: 
+### Contents of each relevent file before bug fix: 
 
-####grade.sh: 
+#### grade.sh: 
 ```
 CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
 
@@ -77,7 +79,7 @@ java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > test-results.txt
 
 ```
 
-####ListExamples.java:
+#### ListExamples.java:
 
 ```
 import java.util.ArrayList;
@@ -131,7 +133,7 @@ class ListExamples {
 }
 ```
 
-####TestListExamples.java:
+#### TestListExamples.java:
 ```
 import static org.junit.Assert.*;
 import org.junit.*;
@@ -157,16 +159,16 @@ public class TestListExamples {
 
 ```
 
-###Command line to trigger bug: 
+### Command line to trigger bug: 
 
 input: `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-lab3`
 
-###Bug Fix: 
+### Bug Fix: 
 
 In order to fix this bug, the second if conditional in the `grade.sh` file needs to be modified. The original code uses a wrong implementation with the if [ $? == 0 ];` statement and needs to be changed to `if [ $? -ne 0 ];` to properly implement the script. 
 
 
-#Part 2: Reflection
+# Part 2: Reflection
 
 Something that I learned in the second half of the quarter that I thought was really useful was the use of the jdb debugger within the terminal. Most of the times when i'm debugging, I just use the built in debugger within vscode, but the jdb debugger provided a lot more versatility and control as opposed to the vscode debugger. My favorite aspects of the jdb debugger is being able to set the breakpoint at specific locations and print whatever variable I want information on directly in the terminal. This is extremely useful and beneficial not only for debugging code that I am working on, but also reverse engineering code to be able to do fun cool things within java programs. Learning jdb was my favorite part of the course and I wish that we spend more time on it. 
 
