@@ -4,7 +4,7 @@
 
 ![Image](bug.jpg)
 
-hi, i'm trying to run my `grade.sh` file using the bash command and a valid github url (`bash grade.sh [valid github url]`, but when i run my script, the files don't compile using the `javac` command. I'm in the right directory and the file complies if I use the `javac` command outside of the script. I'm not sure why my bash if condition doesn't work and could use some help figuring it out. 
+hi, i'm trying to run my `grade.sh` file using the bash command and a valid github url (`bash grade.sh [valid github url]`), but when i run my script, the files don't compile using the `javac` command. I'm in the right directory and the file complies if I use the `javac` command outside of the script. I'm not sure why my bash if condition doesn't work and could use some help figuring it out. 
 
 ## TA response: 
 
