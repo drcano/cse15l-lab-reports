@@ -14,7 +14,7 @@ When you make your comparison in the bash if conditional, are you comparing stri
 
 ![Image](fix.jpg)
 
-I reviewed the bash scripting worksheets and the stack overflow post and realized that commands return 0 when they are successful. Also on my if conditional, I was using `==` instead of `-eq` since I'm comparing numeric values instead of string values. My other problem was that the if conditional should check if the exit code from the `javac` command is not equal to zero as opposed to being equal to zero. To fix my bug, I changed the original code from `if [ $? == 0 ];` to `if [ $? -ne 0 ];` After doing this, my script was able to successfully run, compile, and save the jUnit test results to a text file. 
+I reviewed the bash scripting worksheets and the stack overflow post and realized that commands return zero when they are successful. Also on my if conditional, I was using `==` instead of `-eq` since I'm comparing numeric values instead of string values. My other problem was that the if conditional should check if the exit code from the `javac` command is not equal to zero as opposed to being equal to zero. To fix my bug, I changed the original code from `if [ $? == 0 ];` to `if [ $? -ne 0 ];` After doing this, my script was able to successfully run, compile, and save the jUnit test results to a text file. 
 
 ## Information: 
 
