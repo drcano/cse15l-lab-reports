@@ -165,11 +165,11 @@ input: `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-lab3`
 
 ### Bug Fix: 
 
-In order to fix this bug, the second if conditional in the `grade.sh` file needs to be modified. The original code uses a wrong implementation with the if [ $? == 0 ];` statement and needs to be changed to `if [ $? -ne 0 ];` to properly implement the script. 
+In order to fix this bug, the second if conditional in the `grade.sh` file needs to be modified. The original code uses a wrong implementation with the if `[ $? == 0 ];` statement and needs to be changed to `if [ $? -ne 0 ];` to properly implement the script. 
 
 
 # Part 2: Reflection
 
-Something that I learned in the second half of the quarter that I thought was really useful was the use of the jdb debugger within the terminal. Most of the times when i'm debugging, I just use the built in debugger within vscode, but the jdb debugger provided a lot more versatility and control as opposed to the vscode debugger. My favorite aspects of the jdb debugger is being able to set the breakpoint at specific locations and print whatever variable I want information on directly in the terminal. This is extremely useful and beneficial not only for debugging code that I am working on, but also reverse engineering code to be able to do fun cool things within java programs. Learning jdb was my favorite part of the course and I wish that we spend more time on it. 
+Something that I learned in the second half of the quarter that I thought was really useful was the use of the jdb debugger within the terminal. Most of the times when i'm debugging, I just use the built in debugger within vscode, but the jdb debugger provided a lot more versatility and control as opposed to the vscode debugger. My favorite aspects of the jdb debugger is being able to set the breakpoint at specific locations and print whatever variable I want information on directly in the terminal. This is extremely useful and beneficial not only for debugging code that I am working on, but also reverse engineering code to be able to do fun cool things within java programs. Learning jdb was my favorite part of the course and I wish that we spent more time on it. 
 
 
