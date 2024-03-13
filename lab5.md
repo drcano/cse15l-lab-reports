@@ -165,7 +165,7 @@ input: `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-lab3`
 
 ### Bug Fix: 
 
-In order to fix this bug, the second if conditional in the `grade.sh` file needs to be modified. The original code uses a wrong implementation with the if `[ $? == 0 ];` statement and needs to be changed to `if [ $? -ne 0 ];` to properly implement the script. 
+In order to fix this bug, the second if conditional in the `grade.sh` file needs to be modified. The original code uses a wrong implementation with the `if [ $? == 0 ];` statement and needs to be changed to `if [ $? -ne 0 ];` to properly implement the script. 
 
 
 # Part 2: Reflection
