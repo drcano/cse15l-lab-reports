@@ -8,7 +8,7 @@ hi, i'm trying to run my `grade.sh` file using the bash command and a valid gith
 
 ## TA response: 
 
-When you make your comparison in the bash if conditional, are you comparing strings or numbers? Your code is trying to compare the exit code from the `javac ./grading-area/student-submission/*.java` and is looking for an exit code equality with respect to 0. What exit code should a bash command return if the command was successful? I'd suggest reviewing this stack overflow post (url) to help with your bug.   
+When you make your comparison in the bash if conditional, are you comparing strings or numbers? Your code is trying to compare the exit code from the `javac ./grading-area/student-submission/*.java` and is looking for an exit code equality with respect to 0. What exit code should a bash command return if the command was successful? I'd suggest reviewing this [stack overflow post](https://stackoverflow.com/questions/20449543/shell-equality-operators-eq) to help with your bug.   
 
 ## Student response: 
 
